@@ -11,7 +11,7 @@ def get_finder(url):
     posts= thread.all_posts
     output = []
     for x in posts:
-        if str(x.post_id)[-1:] == str(x.post_id)[-2:-1] or str(x.post_id)[-2:]=='94' or str(x.post_id)[-2:]==str(x.post_id)[-4:-2]:
+        if str(x.post_id)[-1:] == str(x.post_id)[-2:-1] or str(x.post_id)[-2:]==str(x.post_id)[-4:-2]:
             if re.search('href="#p(.*)"', x.comment) != None:
                 if re.search('>>\d+', cleanup(x.comment)) != None:
                     rpi = re.match('>>\d+', cleanup(x.comment)).group().replace('>>', "")
