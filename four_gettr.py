@@ -5,7 +5,7 @@ import re
 def cleanup(string):
     return BeautifulSoup(string, "lxml").text
 
-def get_finder(url):
+def get_findr(url):
     board=chan.board(url.split('/')[3])
     thread = board.get_thread(url.split('/')[5])
     posts= thread.all_posts
